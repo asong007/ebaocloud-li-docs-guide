@@ -23,7 +23,7 @@ sidebar_categories:
   App:
     - index
     - code_structure
-    - redux
+    - routes
   Reference:
     - setup
   Tools:
