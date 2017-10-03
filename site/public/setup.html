@@ -4,21 +4,21 @@
     <meta charset="utf-8">
 
     <!-- Basic -->
-    <title>Swagger | Developers Guide</title>
-    <meta name="description" content="The best API building tool, ever. Read and understand Swagger">
+    <title>Setup ENV | Developers Guide</title>
+    <meta name="description" content="Setup development enviorement">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="shortcut icon" type="image/png" href="../images/favicon.ico" sizes="16x16 32x32 64x64">
 
     <!-- Social -->
     <meta property="og:type" content="article">
     <meta property="og:url" content="http://docs.ebaocloud.life">
-    <meta property="og:title" content="Swagger | Developers Guide">
-    <meta property="og:description" content="The best API building tool, ever. Read and understand Swagger">
+    <meta property="og:title" content="Setup ENV | Developers Guide">
+    <meta property="og:description" content="Setup development enviorement">
     <meta property="og:image" content="">
     <meta name="twitter:card" content="summary_image_large">
     <meta name="twitter:site" content="">
-    <meta name="twitter:title" content="Swagger | Developers Guide">
-    <meta name="twitter:description" content="The best API building tool, ever. Read and understand Swagger">
+    <meta name="twitter:title" content="Setup ENV | Developers Guide">
+    <meta name="twitter:description" content="Setup development enviorement">
     <meta name="twitter:image" content="">
 
     <!-- Misc -->
@@ -172,8 +172,8 @@
           <ul class="list-toc">
             
               
-              <li class="item-toc ">
-                <a href="setup.html" class="sidebar-link ">
+              <li class="item-toc  current">
+                <a href="" class="sidebar-link  current">
                   <span>Setup ENV</span>
                 </a>
               </li>
@@ -188,8 +188,8 @@
           <ul class="list-toc">
             
               
-              <li class="item-toc  current">
-                <a href="" class="sidebar-link  current">
+              <li class="item-toc ">
+                <a href="swagger.html" class="sidebar-link ">
                   <span>Swagger</span>
                 </a>
               </li>
@@ -218,14 +218,14 @@
 <div class="content">
   <div class="content-wrapper">
     <div class="header-content">
-      <h1 class="title-page">Swagger</h1>
+      <h1 class="title-page">Setup ENV</h1>
       
-        <div class="subtitle-page">The best API building tool, ever. Read and understand Swagger</div>
+        <div class="subtitle-page">Setup development enviorement</div>
       
 <!--
       <div class="page-actions">
         <div class="actions-group">
-          <a class="btn tertiary small round lowercase" href="https://github.com/zhuliliang/ebaocloud-li-docs/tree/master/content/swagger.md" target="_blank"><span class="icon-github"></span> <span>Edit on GitHub</span></a>
+          <a class="btn tertiary small round lowercase" href="https://github.com/zhuliliang/ebaocloud-li-docs/tree/master/content/setup.md" target="_blank"><span class="icon-github"></span> <span>Edit on GitHub</span></a>
           
         </div>
       </div>
@@ -233,7 +233,39 @@
     </div>
 
     <div class="document-formatting">
-      
+      <h3 id="Setup-the-out-of-box-application-by-following-steps"><a href="#Setup-the-out-of-box-application-by-following-steps" class="headerlink" title="Setup the out-of-box application by following steps"></a>Setup the out-of-box application by following steps</h3><h4 id="1-Install-npm-amp-Node-js"><a href="#1-Install-npm-amp-Node-js" class="headerlink" title="1. Install npm &amp; Node.js"></a>1. Install npm &amp; Node.js</h4><ul>
+<li><p>For MS Windows, run below  in CMD:</p>
+<figure class="highlight sh"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ npm install --global --production windows-build-tools</div></pre></td></tr></table></figure>
+</li>
+<li><p>On Mac</p>
+</li>
+<li><p>Run following commad to check version</p>
+<figure class="highlight sh"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">$ node -v</div><div class="line">v6.10.3 //make sure the node version &gt;= 6</div><div class="line">$ npm -v</div><div class="line">5.4.2   //make sure the npm version &gt;= 5</div></pre></td></tr></table></figure>
+</li>
+</ul>
+<h4 id="2-Setup-project"><a href="#2-Setup-project" class="headerlink" title="2. Setup project"></a>2. Setup project</h4><ul>
+<li><p>Setup project runing fold</p>
+<figure class="highlight sh"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">$ mkdir ebaocloud-learning</div><div class="line">$ <span class="built_in">cd</span> ebaocloud-learning</div></pre></td></tr></table></figure>
+</li>
+<li><p>Copy the source code into the fold or run</p>
+</li>
+<li><p>Run below command in the project folder</p>
+<figure class="highlight sh"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">$ npm install</div><div class="line">$ npm start</div></pre></td></tr></table></figure>
+</li>
+<li><p>If there is no error in the reuslt, you can open below link in any morden browers: <a href="localhost:3000/app/productList?msg=eyJ0ZW5hbnRDb2RlIjoiR1VFU1QiLCJwcm9kdWNlckNvZGUiOiJhdjEyMzQ1IiwicHJvZHVjZXJOYW1lIjoiQXZyaXN0IEFnZW50IiwicHJvZHVjZXJUeXBlIjoiMSIsInByb2R1Y2VyUGhvbmUiOiIxMjM0NTY3ODkwMSIsInByb2R1Y2VyRW1haWwiOiJhZG1pbkBlYmFvdGVjaC5jb20iLCJleHRyYVByb3BlcnRpZXMiOnt9LCJhZ2VudEluZm9NYXAiOnt9fQ==&amp;sign=14222f754cf86d06cd1f462d8ce91278&amp;tenantCode=GUEST" target="_blank" rel="external">CLICK HERE</a>. If you see this in your browser, then you have made a scusessful installation.</p>
+</li>
+<li><p>To build release package</p>
+<ol>
+<li><p>UAT:</p>
+<figure class="highlight dockerfile"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ npm <span class="keyword">run</span><span class="bash"> build:uat</span></div></pre></td></tr></table></figure>
+</li>
+<li><p>Production:</p>
+<figure class="highlight dockerfile"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ npm <span class="keyword">run</span><span class="bash"> build</span></div></pre></td></tr></table></figure>
+</li>
+</ol>
+</li>
+</ul>
+
     </div>
   </div>
 
@@ -242,17 +274,17 @@
       
       
         <a class="link primary prev"
-          href="setup.html">
+          href="redux.html">
           <span class="icon-arrow-left-alt"></span>
           <span class="subtitle-pagination">Previous</span>
-          Setup ENV
+          Redux
         </a>
       
       
         <a class="link primary next"
-          href="postman.html">
+          href="swagger.html">
           <span class="subtitle-pagination">Next</span>
-          Postman
+          Swagger
           <span class="icon-arrow-right-alt"></span>
         </a>
       
@@ -261,7 +293,7 @@
 
   <!--
   <div class="github">
-    <a class="link tertiary " href="https://github.com/zhuliliang/ebaocloud-li-docs/tree/master/content/swagger.md" target="_blank">
+    <a class="link tertiary " href="https://github.com/zhuliliang/ebaocloud-li-docs/tree/master/content/setup.md" target="_blank">
       <span class="icon-github"></span>Edit on GitHub</a>
   </div>
 -->

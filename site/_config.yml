@@ -3,11 +3,11 @@
 ## Source: https://github.com/hexojs/hexo/
 
 # Site
-title: eBaoCloud LI Docs
+title: Developers Guide
 subtitle:
-description: Provide full stack eBaoCloud LI document on
+description: Provide full stack eBaoCloud LI Developers Guide with samples
 author: ZhuLiliang
-language: [en] 
+language: [en]
 # config hexo-generator-i18n option (optional, this is default option)
 i18n:
   type: [page, post]
@@ -20,10 +20,12 @@ versions:
   - '1'
 github_repo: zhuliliang/ebaocloud-li-docs
 sidebar_categories:
-  null:
+  App:
     - index
-  GET STARTED:
-    - first-appliation
+    - code_structure
+    - redux
+  Reference:
+    - setup
   Tools:
     - swagger
     - postman
@@ -33,7 +35,7 @@ sidebar_categories:
 favicon: '../images/favicon.ico'
 
 logo:
-  nav_mobile: '../images/ebaocloud-logo-alpha.png'
+  nav_mobile: '../images/ebaocloud-logo.png'
   url: 'http://docs.ebaocloud.life'
   title: 'eBaoCloud Docs'
   subtitle: 'eBaoCloud LI Docs'

@@ -1,32 +1,35 @@
 ---
-title: Introduction
+title: Before Start
 order: 0
-description: The guide for how to use the eBaoCloud as a platform to build your own appliations.
-date: 2017-07-15
-updated: 2017-07-15
+description: The guide for how to use the eBaoCloud to build a HTML5 app (for mobile / wechat)
+date: 2017-09-30
+updated: 2017-09-30
 comments:	true
 ---
 
-This is the official documentation for eBaoCloud.
 
-<h3 id="what-is">What is eBaoCloud?</h3>
+### Setup Development Env
 
-eBaoCloud is an Open API Platform for Connected Insurance.
+The mobile app solution is a HTML5 based solution.
 
-- **Native cloud architecture**: With the decade expereience and deep knowledge of the insurance industry, we build a native cluod solution for the every shareholders (insurer, channel, agent, broker, customer...). The eBaoCloud can support both tranditional products and new Internet insurance.
+- **React & Redux** are two major frameworks used to build the user interface.
+- **NodeJS and npm** are used to develop the app.
 
-- **Micro services and Open APIs**: By using micro services and Open APIs, eBaoCloud expose the insurance related capacity to the public. With the document, 3rd party developers can easily build their own application without any deep insurance knowledges.
+Before starting the development, you need to setup the development enviorement first. Please go to setup page ([SETUP](./setup.html)) to setup the enviorement.
 
-- **Innovations**: The eBaoCloud provides native innovations in many area such as product bundling, cross channels ...
+### IDE
+The solution does not rely on any specific IDE. How ever we recommend VS Code or WebStorm(need license).
+  - [VS Code](https://code.visualstudio.com/docs/nodejs/reactjs-tutorial) or [WebStorm](https://blog.jetbrains.com/webstorm/2015/10/working-with-reactjs-in-webstorm-coding-assistance/) 
+  - Atom and Sublime are workable as well
 
-- **Connection to Everything**: Pre-build product engine and connecters work as a hub which connect every shareholds.
+To tune the page through Chrome, you need to install the Chrome and according Chrome plugin.
+- [Chrome](https://www.google.com/chrome/)
+- Redux Chrome plugin ([google app store](https://chrome.google.com/webstore/detail/redux-devtools/lmhkpmbekcpmknklioeibfkpmmfibljd?hl=en))
+![Chrome Redux Plugin](/md-resource/chrome-redux-plugin.png)
 
 
-<h3 id="quickstart">Get Started</h3>
-
-- Start to build first simple applcation [ quickstart](/first-appliation.html) within 15mins.
-
-- Follow the [TOOLS](/swagger.html) to setup your development environment.
-
-<h3 id="contribute">Contribute</h3>
-TBD
+### Naming conventions
+1. All varialbes, parameters, properties, functions and files names should follow Camel Case
+2. All class names and react component js file names should follow Pascal Case
+3. All const strings should follow UPPER_CASE_WITH_UNSERSCORE
+4. All naming should be self-descriptive, more detail would be better.
