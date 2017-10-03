@@ -1,0 +1,30 @@
+{
+  "name": "hexo-site",
+  "version": "0.0.0",
+  "private": true,
+  "hexo": {
+    "version": "3.3.7"
+  },
+  "dependencies": {
+    "hexo": "3.3.7",
+    "hexo-autoprefixer": "^1.0.0",
+    "hexo-generator-archive": "^0.1.2",
+    "hexo-generator-category": "^0.1.2",
+    "hexo-generator-i18n": "0.0.7",
+    "hexo-generator-index": "^0.2.1",
+    "hexo-generator-tag": "^0.2.0",
+    "hexo-renderer-ejs": "^0.2.0",
+    "hexo-renderer-jade": "^0.3.0",
+    "hexo-renderer-less": "^0.2.0",
+    "hexo-renderer-marked": "^0.2.4",
+    "hexo-renderer-stylus": "^0.3.0",
+    "hexo-server": "^0.2.2"
+  },
+  "devDependencies": {
+    "hexo-s3-deploy": "github:meteor/hexo-s3-deploy#e36f6d046660040878bb5bedfc8422f526a78be6"
+  },
+  "scripts": {
+    "deploy": "hexo-s3-deploy",
+    "start": "hexo serve"
+  }
+}
