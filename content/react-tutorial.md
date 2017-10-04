@@ -8,8 +8,9 @@ In this toturial, we will create a new module: [TODO]
 Before you start this session, make sure you have successfully [setup](./setup.html#Setup-react-application) the react appliation in local machine and can access the appliation through [localhost:3000](http://localhost:3000/app/productList?msg=eyJ0ZW5hbnRDb2RlIjoiR1VFU1QiLCJwcm9kdWNlckNvZGUiOiJhdjEyMzQ1IiwicHJvZHVjZXJOYW1lIjoiQXZyaXN0IEFnZW50IiwicHJvZHVjZXJUeXBlIjoiMSIsInByb2R1Y2VyUGhvbmUiOiIxMjM0NTY3ODkwMSIsInByb2R1Y2VyRW1haWwiOiJhZG1pbkBlYmFvdGVjaC5jb20iLCJleHRyYVByb3BlcnRpZXMiOnt9LCJhZ2VudEluZm9NYXAiOnt9fQ==&sign=14222f754cf86d06cd1f462d8ce91278&tenantCode=GUEST).
 
 ## 0. Code Structure (TL;TR)
- sub-folds like this:
+In routes fold, there are many sub-folds and one **index.js** like this:
 ```bash
+routes/
 ├── BrowserHistory/
 ├── Clause/
 ├── CompanyIntro/
@@ -39,46 +40,47 @@ routes/Home/
           ├── actions.js
           └── reducer.js
 ```
+In this turorial, we will create a new fold calls 'Todo' and build a module accordingly.
 ## 1. Create a new module
-   - #### Duplicate one module
-     1. Duplicate the **Home** and rename it to **Todo**, and change the according naming as below
+   - #### Duplicate from one existing module
+     1. Duplicate the **Home** and rename it to **Todo**, and change the according files' naming as below
       ```bash
       Todo/
-        ├── components/
-        │   ├── TodoView.js
-        │   └── TodoView.scss
-        ├── containers/
-        │   └── TodoContainer.js
-        ├── index.js
-        └── modules/
-            ├── actionTypes.js
-            ├── actions.js
-            └── reducer.js
+      ├── components/
+      │   ├── TodoView.js
+      │   └── TodoView.scss
+      ├── containers/
+      │   └── TodoContainer.js
+      ├── index.js
+      └── modules/
+          ├── actionTypes.js
+          ├── actions.js
+          └── reducer.js
       ```
      2. Edit **components/TodoView.js** as below
         - original:
-            ```javascript
-            import './HomeView.scss'
+          ```javascript
+          import './HomeView.scss'
 
-            export default class HomeView extends React.Component {
-            ```
-       - new:
-            ```javascript
-            import './TodoView.scss'
+          export default class HomeView extends React.Component {
+          ```
+        - new:
+          ```javascript
+          import './TodoView.scss'
 
-            export default class TodoView extends React.Component {
+          export default class TodoView extends React.Component {
             ```
      3. Edit **containers/TodoContainer.js** as below
-       - original:
-            ```js
-            import HomeView from '../components/HomeView'
-            ```
-       - new:
-            ```js
-            import HomeView from '../components/TodoView'
-            ```
+        - original:
+          ```js
+          import HomeView from '../components/HomeView'
+          ```
+        - new:
+          ```js
+          import HomeView from '../components/TodoView'
+          ```
    - #### Setup path for this module
-     Since this is a new module, you need set a path (for URL) to access this module. We can just edit the **index.js** in the root of the Todo/ fold.
+     Since this is a new module, you need set a path (for URL) to access this module. We can just edit the **routes/Todo/index.js** in the root of the Todo/ fold.
      ```js
       import { injectReducer } from '../../store/reducers'
 
@@ -107,7 +109,7 @@ routes/Home/
       ```
 
     - #### Final step, import Todo into routes
-      Edit the **/routes/index.js**, add
+      Edit the **/routes/index.js**, add 2 lines:
       ```js
       ...
       import Todo from './Todo'
