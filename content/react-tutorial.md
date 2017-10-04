@@ -128,7 +128,6 @@ In this turorial, we will create a new fold calls 'Todo' and build a module acco
        configuration, you made it.
 
 ## 2. Parameter
-## 3. Parameter
 
 ## 3. Call restful APIs
 
@@ -137,6 +136,3 @@ In this turorial, we will create a new fold calls 'Todo' and build a module acco
 ## 5. Crossing Modules
 
 ## 6. i18n
-
-## 7. awesome apple
-## 8. liliang zhu
