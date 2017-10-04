@@ -89,12 +89,4 @@ src/
 ```
 
 ### routes/
-Routes child folder code structure. There many routes which controlled by Redux. Please refer to [Route](./routes.html). In each route, it contains below code:
-```sh
-route/abc/
-      ├── assets/                     #
-      ├── components/                 # react UI components view or page
-      ├── containers/                 # redux container that connect view and store
-      ├── index.js                    # dynamic router entry point
-      └── modules/                    # redux modues
-```
+Routes child folder code structure. There many routes which controlled by Redux. Please refer to [Route](./routes.html). 

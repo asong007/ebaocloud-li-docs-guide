@@ -1,5 +1,5 @@
 ---
-title: Consume API by Postman
+title: Consume API through Postman
 order: 7
 description: Use the and build your test cases of eBaoCloud's APIs
 ---
