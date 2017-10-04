@@ -3,9 +3,9 @@ title: Build a React App
 order: 7
 description: Build a new module base on the existing appliation
 ---
-In this toturial, we will create a new module [TODO]
+In this toturial, we will create a new module: [TODO]
 
-Before you
+Before you start this session, make sure you have successfully [setup](./setup.html#Setup-react-application) the react appliation in local machine and can access the appliation through [localhost:3000](http://localhost:3000/app/productList?msg=eyJ0ZW5hbnRDb2RlIjoiR1VFU1QiLCJwcm9kdWNlckNvZGUiOiJhdjEyMzQ1IiwicHJvZHVjZXJOYW1lIjoiQXZyaXN0IEFnZW50IiwicHJvZHVjZXJUeXBlIjoiMSIsInByb2R1Y2VyUGhvbmUiOiIxMjM0NTY3ODkwMSIsInByb2R1Y2VyRW1haWwiOiJhZG1pbkBlYmFvdGVjaC5jb20iLCJleHRyYVByb3BlcnRpZXMiOnt9LCJhZ2VudEluZm9NYXAiOnt9fQ==&sign=14222f754cf86d06cd1f462d8ce91278&tenantCode=GUEST).
 
 ## 0. Code Structure (TL;TR)
  sub-folds like this:
@@ -39,23 +39,23 @@ routes/Home/
           ├── actions.js
           └── reducer.js
 ```
-## 1. Create a new module (very important have read)
+## 1. Create a new module
    - #### Duplicate one module
      1. Duplicate the **Home** and rename it to **Todo**, and change the according naming as below
-        ```bash
-        Todo/
-          ├── components/
-          │   ├── TodoView.js
-          │   └── TodoView.scss
-          ├── containers/
-          │   └── TodoContainer.js
-          ├── index.js
-          └── modules/
-              ├── actionTypes.js
-              ├── actions.js
-              └── reducer.js
-        ```
-      2. Edit **components/TodoView.js** as below
+      ```bash
+      Todo/
+        ├── components/
+        │   ├── TodoView.js
+        │   └── TodoView.scss
+        ├── containers/
+        │   └── TodoContainer.js
+        ├── index.js
+        └── modules/
+            ├── actionTypes.js
+            ├── actions.js
+            └── reducer.js
+      ```
+     2. Edit **components/TodoView.js** as below
         - original:
             ```javascript
             import './HomeView.scss'
@@ -68,7 +68,7 @@ routes/Home/
 
             export default class TodoView extends React.Component {
             ```
-      3. Edit **containers/TodoContainer.js** as below
+     3. Edit **containers/TodoContainer.js** as below
        - original:
             ```js
             import HomeView from '../components/HomeView'
@@ -77,9 +77,56 @@ routes/Home/
             ```js
             import HomeView from '../components/TodoView'
             ```
+   - #### Setup path for this module
+     Since this is a new module, you need set a path (for URL) to access this module. We can just edit the **index.js** in the root of the Todo/ fold.
+     ```js
+      import { injectReducer } from '../../store/reducers'
 
+      export default (store) => ({
+        path: 'todo',
+        /*  Async getComponent is only invoked when route matches   */
+        getComponent (nextState, cb) {
+          /*  Webpack - use 'require.ensure' to create a split point
+           and embed an async module loader (jsonp) when bundling   */
+          require.ensure([], (require) => {
+            /*  Webpack - use require callback to define
+             dependencies for bundling   */
+            const Todo = require('./containers/TodoContainer').default
+            const reducer = require('./modules/reducer').default
+
+            /*  Add the reducer to the store on key 'counter'  */
+            injectReducer(store, { key: 'todo', reducer })
+
+            /*  Return getComponent   */
+            cb(null, Todo)
+
+            /* Webpack named bundle   */
+          }, 'todo')
+        }
+      })
+      ```
+
+    - #### Final step, import Todo into routes
+      Edit the **/routes/index.js**, add
+      ```js
+      ...
+      import Todo from './Todo'
+      ...
+
+      ...
+      Todo(store),
+      ...
+      ```
+     - #### Check result
+       Restart npm
+       ```bash
+       $ npm start
+       ```
+       Check here [http://localhost:3000/app/todo](http://localhost:3000/app/todo) and if you see this page, ![Todo welcome](./assets/todo-welcome.png)
+       configuration, you made it.
 
 ## 2. Parameter
+## 3. Parameter
 
 ## 3. Call restful APIs
 
