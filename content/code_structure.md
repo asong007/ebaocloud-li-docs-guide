@@ -8,7 +8,7 @@ comments:	true
 ---
 To understand the source code, you need to understand the code structure frist. Here are several key folds:
 ### Root /
-When you finish the [enviroement setup](./setup.html), you should see below code in your project fold.
+When you finish the [enviroement setup](./setup.html), you should see below code in your project fold.
 ```bash
 /
 ├── .editorconfig
@@ -20,7 +20,7 @@ When you finish the [enviroement setup](./setup.html), you should see below cod
 ├── LICENSE                                     # LICENSE file
 ├── README.md                                   # read me file
 ├── build/                                      # All build-related code
-├── doc/                                        # All related documents
+├── doc/                                        # All related documents
 ├── gettext0.19.8.1-iconv1.14-shared-64.exe     # gettext and iconv binaries for Windows.
 ├── lib/                                        # 3rd party js libary fold
 ├── node_modules                                # Node Modules fold. Packages are dropped into the here.
@@ -89,4 +89,4 @@ src/
 ```
 
 ### routes/
-Routes child folder code structure. There many routes which controlled by Redux. Please refer to [Route](./routes.html). 
+Routes child folder code structure. There many routes which controlled by Redux. Please refer to [Route](./routes.html).
