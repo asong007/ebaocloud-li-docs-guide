@@ -41,43 +41,42 @@ routes/Home/
 ```
 ## 1. Create a new module (very important have read)
    - #### Duplicate one module
-      1. Duplicate the **Home** and rename it to **Todo**, and change the according naming as below
-```bash
-Todo/
-  ├── components/
-  │   ├── TodoView.js
-  │   └── TodoView.scss
-  ├── containers/
-  │   └── TodoContainer.js
-  ├── index.js
-  └── modules/
-      ├── actionTypes.js
-      ├── actions.js
-      └── reducer.js
-```
-      1. Edit **components/TodoView.js** as below
+     1. Duplicate the **Home** and rename it to **Todo**, and change the according naming as below
+        ```bash
+        Todo/
+          ├── components/
+          │   ├── TodoView.js
+          │   └── TodoView.scss
+          ├── containers/
+          │   └── TodoContainer.js
+          ├── index.js
+          └── modules/
+              ├── actionTypes.js
+              ├── actions.js
+              └── reducer.js
+        ```
+      2. Edit **components/TodoView.js** as below
+        - original:
+            ```javascript
+            import './HomeView.scss'
+
+            export default class HomeView extends React.Component {
+            ```
+       - new:
+            ```javascript
+            import './TodoView.scss'
+
+            export default class TodoView extends React.Component {
+            ```
+      3. Edit **containers/TodoContainer.js** as below
        - original:
-```js
-import './HomeView.scss'
-
-export default class HomeView extends React.Component {
-```
-       - new
-```js
-import './TodoView.scss'
-
-export default class TodoView extends React.Component {
-```
-
-      1. Edit **containers/TodoContainer.js** as below
-       - original:
-```js
-import HomeView from '../components/HomeView'
-```
-       - new
-```js
-import HomeView from '../components/TodoView'
-```
+            ```js
+            import HomeView from '../components/HomeView'
+            ```
+       - new:
+            ```js
+            import HomeView from '../components/TodoView'
+            ```
 
 
 ## 2. Parameter
