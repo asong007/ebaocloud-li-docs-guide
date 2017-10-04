@@ -6,7 +6,7 @@ date: 2017-07-15
 updated: 2017-07-15
 comments:	true
 ---
-
+To understand the source code, you need to understand the code structure frist. Here are several key folds:
 ### Root /
 When you finish the [enviroement setup](./setup.html), you should see below code in your project fold.
 ```bash
@@ -88,11 +88,11 @@ src/
 └── styles/                           # Application-wide styles (generally settings)
 ```
 
-### route/
+### routes/
 Routes child folder code structure. There many routes which controlled by Redux. Please refer to [Route](./routes.html). In each route, it contains below code:
 ```sh
 route/abc/
-      ├── assets/                     # 
+      ├── assets/                     #
       ├── components/                 # react UI components view or page
       ├── containers/                 # redux container that connect view and store
       ├── index.js                    # dynamic router entry point

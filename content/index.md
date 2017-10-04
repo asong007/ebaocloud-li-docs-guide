@@ -1,5 +1,5 @@
 ---
-title: Before Start
+title: Preparation
 order: 0
 description: The guide for how to use the eBaoCloud to build a HTML5 app (for mobile / wechat)
 date: 2017-09-30
@@ -19,7 +19,7 @@ Before starting the development, you need to setup the development enviorement f
 
 ### IDE
 The solution does not rely on any specific IDE. How ever we recommend VS Code or WebStorm(need license).
-  - [VS Code](https://code.visualstudio.com/docs/nodejs/reactjs-tutorial) or [WebStorm](https://blog.jetbrains.com/webstorm/2015/10/working-with-reactjs-in-webstorm-coding-assistance/) 
+  - [VS Code](https://code.visualstudio.com/docs/nodejs/reactjs-tutorial) or [WebStorm](https://blog.jetbrains.com/webstorm/2015/10/working-with-reactjs-in-webstorm-coding-assistance/)
   - Atom and Sublime are workable as well
 
 To tune the page through Chrome, you need to install the Chrome and according Chrome plugin.

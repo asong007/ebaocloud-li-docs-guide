@@ -20,10 +20,12 @@ versions:
   - '1'
 github_repo: zhuliliang/ebaocloud-li-docs
 sidebar_categories:
-  App:
+  Before Start:
     - index
     - code_structure
     - routes
+  TUTORIAL:
+    - html5-tutorial
   Reference:
     - setup
   Tools:
