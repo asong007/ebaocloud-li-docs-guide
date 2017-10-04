@@ -25,6 +25,7 @@ sidebar_categories:
     - code_structure
     - routes
   TUTORIAL:
+    - api-tutorial
     - html5-tutorial
   Reference:
     - setup

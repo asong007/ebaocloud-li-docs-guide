@@ -1,5 +1,5 @@
 ---
-title: React & Redux App
+title: Build a React App
 order: 7
 description: Build a new module base on the existing appliation
 ---
